@@ -1,0 +1,58 @@
+.add {
+  display: flex;
+}
+.addleft {
+  flex: 2;
+}
+.addright {
+  flex: 1;
+}
+.addinput {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.addinputImage {
+  width: 150px;
+  height: 150px;
+}
+.addformset {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
+}
+.addformText {
+  color: gray;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.addformInput {
+  border: none;
+  outline: none;
+  height: 25px;
+  font-size: 15px;
+  color: rgb(72, 68, 68);
+  border-bottom: 1px solid blue;
+}
+.submitaddform {
+  width: 50%;
+  align-self: center;
+  margin-top: 20px;
+  padding: 6px;
+  border-radius: 15px;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .add {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .addright {
+    padding: 10px;
+  }
+  .addleft {
+    flex-direction: column;
+  }
+}

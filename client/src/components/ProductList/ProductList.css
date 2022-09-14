@@ -1,0 +1,48 @@
+.plist {
+  display: flex;
+  padding: 10px;
+}
+.plistwrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.plistImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 21px -5px rgba(5, 7, 5, 0.75);
+  -webkit-box-shadow: 0px 10px 21px -5px rgba(39, 44, 38, 0.75);
+  -moz-box-shadow: 0px 10px 21px -5px rgba(32, 118, 19, 0.75);
+}
+.plistleft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plistright {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(14, 14, 90);
+  font-size: 18px;
+  font-weight: 500;
+}
+.delete {
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid blue;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .plistright {
+    flex-direction: column;
+  }
+  .plistwrapper {
+    display: flex;
+    align-items: center;
+  }
+}
