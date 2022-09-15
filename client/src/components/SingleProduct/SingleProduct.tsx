@@ -5,6 +5,7 @@ import kadiyal from "../../assets/kadiyal.jpeg";
 import manis from "../../assets/mani.jpeg";
 import phone from "../../assets/phone.png";
 import whatsapp from "../../assets/whatsapp.png";
+import { Link } from "react-router-dom";
 type productProps = {
   thikness: number;
   size: number;
@@ -52,8 +53,12 @@ const SingleProduct = ({
             If You want Item Contact Whatsapp Or Phone.
           </span>
           <div className="contacts">
-            <img src={whatsapp} alt="" className="contact" />
-            <img src={phone} alt="" className="contact" />
+            <Link to={"https://wa.me/+918156806998"}>
+              <img src={whatsapp} alt="" className="contact" />
+            </Link>
+            <a href="tel:+918714860998">
+              <img src={phone} alt="" className="contact" />
+            </a>
           </div>
         </div>
       </div>

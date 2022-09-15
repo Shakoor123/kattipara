@@ -4,6 +4,7 @@ import profile from "../../assets/profile.jpeg";
 import phone from "../../assets/phone.png";
 import whatsapp from "../../assets/whatsapp.png";
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -17,8 +18,12 @@ const Sidebar = () => {
             <p className="about">Available kasaragod Only</p>
           </div>
           <div className="sidebarBottom">
-            <img src={whatsapp} alt="" className="icons" />
-            <img src={phone} alt="" className="icons" />
+            <Link to={"https://wa.me/+918156806998"}>
+              <img src={whatsapp} alt="" className="icons" />
+            </Link>
+            <a href="tel:+918714860998">
+              <img src={phone} alt="" className="icons" />
+            </a>
           </div>
           <img src={profile} alt="" className="profile" />
         </div>

@@ -10,19 +10,31 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoPage from "./pages/NoPage";
 import { ThemeContext } from "./context/context";
 function App() {
-  const [cuser, setCuser] = useState(false);
+  const [admin, setAdmin] = useState(false);
   const [dark, setDark] = useState(false);
   return (
     <div className={dark ? "darkMode" : "App"}>
-      <ThemeContext.Provider value={{ dark, setDark }}>
+      <ThemeContext.Provider value={{ dark, setDark, admin, setAdmin }}>
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={cuser ? <Home /> : <LoginPage />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/addproduct" element={<AddProduct />} />
-            <Route path="*" element={<NoPage />} />
-          </Routes>
+          <ThemeContext.Consumer>
+            {(value) => (
+              <Routes>
+                <Route path="/" element={<Home />} />
+
+                <Route
+                  path="/login"
+                  element={admin ? <Home /> : <LoginPage />}
+                />
+
+                <Route path="/product/:id" element={<Product />} />
+                <Route
+                  path="/addproduct"
+                  element={admin ? <AddProduct /> : <NoPage />}
+                />
+                <Route path="*" element={<NoPage />} />
+              </Routes>
+            )}
+          </ThemeContext.Consumer>
         </BrowserRouter>
       </ThemeContext.Provider>
     </div>

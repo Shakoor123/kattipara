@@ -27,7 +27,6 @@ const ProductList = ({
       `${process.env.REACT_APP_URL}products/${id}`
     );
     alert(res.data);
-    window.location.reload();
   };
   return (
     <div className="plist">

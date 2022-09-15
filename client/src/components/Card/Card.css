@@ -54,3 +54,16 @@
     margin-top: 20px;
   }
 }
+@media only screen and (max-width: 370px) {
+  .card {
+    width: 90%;
+    height: 260px;
+  }
+  .cardImage {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    border: 1px solid brown;
+    margin-top: 10px;
+  }
+}

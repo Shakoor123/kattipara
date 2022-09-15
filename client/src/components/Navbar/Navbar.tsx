@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { ThemeContext } from "../../context/context";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [button, setButton] = useState(false);
   const buttonHandle = () => {
@@ -13,7 +14,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarwrapper">
-        <span className="name">Kattippara</span>
+        <Link to={"/"}>
+          <span className="name">Kattippara</span>
+        </Link>
         <ThemeContext.Consumer>
           {(value) => (
             <button

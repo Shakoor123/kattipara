@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import axios from "axios";
 import "./Home.css";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -30,6 +31,7 @@ const Home = () => {
                 </Link>
               ))}
             </div>
+            <Footer />
           </div>
         </div>
       </div>
