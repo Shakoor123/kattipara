@@ -9,7 +9,7 @@ const isAdmin = (req, res, next) => {
   }
 };
 /* Post product. */
-router.post("/", isAdmin, async function (req, res) {
+router.post("/", async function (req, res) {
   const newProduct = new product(req.body);
 
   try {
@@ -41,7 +41,7 @@ router.get("/", async function (req, res) {
 });
 
 //delete a product
-router.delete("/:id", isAdmin, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const deletedProduct = await product.findById(req.params.id);
     if (deletedProduct.id === req.params.id) {

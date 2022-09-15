@@ -11,7 +11,7 @@ import NoPage from "./pages/NoPage";
 
 function App() {
   const [cuser, setCuser] = useState(false);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   return (
     <div className={dark ? "darkMode" : "App"}>
       <BrowserRouter>
@@ -19,10 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={cuser ? <Home /> : <LoginPage />} />
           <Route path="/product/:id" element={<Product />} />
-          <Route
-            path="/addproduct"
-            element={cuser ? <AddProduct /> : <Home />}
-          />
+          <Route path="/addproduct" element={<AddProduct />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

@@ -66,8 +66,8 @@
     display: none;
   }
   .logo {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
   }
   .sidebarBottom {
     flex-direction: column;
