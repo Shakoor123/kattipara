@@ -1,29 +1,21 @@
 .footer {
   border-radius: 30px;
-  color: green;
 }
 .footerWrapper {
   display: flex;
   padding: 20px;
-}
-.footerLeft {
-  flex: 1;
+  flex-direction: column;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 50px;
 }
+
 .footerItem {
   display: flex;
   align-items: center;
   font-size: 15px;
 }
-.footerRight {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 @media only screen and (max-width: 480px) {
   .footerWrapper {
     flex-direction: column;

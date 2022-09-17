@@ -18,9 +18,9 @@ const Sidebar = () => {
             <p className="about">Available kasaragod Only</p>
           </div>
           <div className="sidebarBottom">
-            <Link to={"https://wa.me/+918156806998"}>
+            <a href="https://wa.me/+918156806998">
               <img src={whatsapp} alt="" className="icons" />
-            </Link>
+            </a>
             <a href="tel:+918714860998">
               <img src={phone} alt="" className="icons" />
             </a>

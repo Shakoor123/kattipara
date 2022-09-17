@@ -38,6 +38,7 @@ const AddForm = () => {
       forign,
     });
     setLoading(false);
+    window.location.reload();
   };
   return (
     <div className="addform">
