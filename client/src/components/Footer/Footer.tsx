@@ -18,17 +18,7 @@ const Footer = () => {
             <span className="footerItemRight"> 8714860998</span>
           </div>
         </div>
-        <div className="footerRight">
-          <iframe
-            src="https://maps.app.goo.gl/aKg6DQPFpXk55iDm7"
-            width="150"
-            height="150"
-            style={{ border: 0, borderRadius: 10 }}
-            aria-hidden="false"
-          >
-            <span>abdul shakoor</span>
-          </iframe>
-        </div>
+        <div className="footerRight"></div>
       </div>
     </div>
   );

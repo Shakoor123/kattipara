@@ -28,7 +28,7 @@ const SingleProduct = ({
   return (
     <div className="product">
       <div className="productLeft">
-        <img src={net1} alt="" className="productImage" />
+        <img src={img} alt="" className="productImage" />
       </div>
       <div className="productRight">
         <div className="productInfo">

@@ -45,6 +45,7 @@ const Login = () => {
                     );
                     if (res.data === "login success") {
                       value.setAdmin(true);
+                      localStorage.setItem("admin", "true");
                       navigate("/addproduct");
                     }
                   }

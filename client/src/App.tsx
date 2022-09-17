@@ -12,6 +12,7 @@ import { ThemeContext } from "./context/context";
 function App() {
   const [admin, setAdmin] = useState(false);
   const [dark, setDark] = useState(false);
+  const loggin = localStorage.getItem("admin");
   return (
     <div className={dark ? "darkMode" : "App"}>
       <ThemeContext.Provider value={{ dark, setDark, admin, setAdmin }}>
@@ -29,7 +30,7 @@ function App() {
                 <Route path="/product/:id" element={<Product />} />
                 <Route
                   path="/addproduct"
-                  element={admin ? <AddProduct /> : <NoPage />}
+                  element={loggin ? <AddProduct /> : <NoPage />}
                 />
                 <Route path="*" element={<NoPage />} />
               </Routes>
