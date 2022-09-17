@@ -26,7 +26,7 @@ const ProductList = ({
     const res = await axios.delete(
       `${process.env.REACT_APP_URL}products/${id}`
     );
-    alert(res.data);
+    window.location.reload();
   };
   return (
     <div className="plist">
